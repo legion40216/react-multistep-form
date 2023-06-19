@@ -8,9 +8,9 @@ const Sidebar = ({totalStep,currentStep,handleNavigation,showComplete}) => {
     ]
  
     const newStepProperties = stepsProperties.slice(0, totalStep)
-
+    
     const handleSidebar = (index) =>{
-        if(showComplete)
+        if(!showComplete)
         {
          if(currentStep > index)
          {

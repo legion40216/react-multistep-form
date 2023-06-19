@@ -73,8 +73,6 @@ const updateForms = (change) => {
    
       setCurrentStep((prevStep)=>{
         const nextStep = prevStep + direction
-        console.log(prevStep)
-        console.log(direction)
         if(direction > prevStep)
         {
           return direction
@@ -123,7 +121,12 @@ const updateForms = (change) => {
 return (
 <main>
 <form  onSubmit={handleFormSubmit} className='main-form'>
-<Sidebar totalStep={stepComponents.length} currentStep={currentStep} handleNavigation={handleNavigation}/>
+<Sidebar 
+totalStep={stepComponents.length} 
+currentStep={currentStep} 
+handleNavigation={handleNavigation}
+showComplete = {showComplete}
+/>
 
 <div className={`mutlistep-content ${showComplete ? "grid-center" : ""}`}>
   <div className='muti-wrapper'>
